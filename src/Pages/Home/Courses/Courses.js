@@ -14,7 +14,7 @@ const Courses = () => {
     return (
         <div className='container'>
             <div className="row">
-                <h2 className=' text-success text-center mt-5'>Edu-Student's Courses</h2>
+                <h2 className=' text-success text-center mt-5'>My Courses</h2>
                 <div className="courses-container">
                     {
                         courses.map(course => <Course
