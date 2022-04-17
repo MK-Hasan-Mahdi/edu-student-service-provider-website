@@ -29,7 +29,7 @@ const Login = () => {
     }
     return (
         <div className='container mx-auto form-container'>
-            <h2 className='text-success text-center mt-3'>Login Please</h2>
+            <h2 className='text-success text-center mt-3' > Login Please</h2 >
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -46,6 +46,7 @@ const Login = () => {
                 </Button>
             </Form>
             <p>New User? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>Register Now</Link></p>
+
         </div>
     );
 };
