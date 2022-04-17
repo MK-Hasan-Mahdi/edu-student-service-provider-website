@@ -12,15 +12,17 @@ const Course = ({ course }) => {
     }
 
     return (
-        <div className='course border border-light '>
-            <img className='w-100 rounded-3 ' src={img} alt="" />
-            <h2>{name}</h2>
-            <p>Price:{price}</p>
-            <p><small>{description}</small></p>
-            <p><small>{description}</small></p>
-            <p><small>{description}</small></p>
-            <p><small>{description}</small></p>
-            <button onClick={() => navigateToCourseDetail(id)} className='btn btn-success mx-auto d-block px-3'>Buy Now</button>
+        <div className='col-sm-12 col-md-6 col-lg-4'>
+            <div className='border p-2 m-2'>
+                <img className=' w-100 rounded-3 ' src={img} alt="" />
+                <div className='mx-auto d-block px-3 course-info'>
+                    <h5>{name}</h5>
+                    <p>Price:{price}</p>
+                    <p><small>{description}</small></p>
+
+                    <button onClick={() => navigateToCourseDetail(id)} className='btn btn-success px-3'>Buy Now</button>
+                </div>
+            </div>
         </div >
     );
 };

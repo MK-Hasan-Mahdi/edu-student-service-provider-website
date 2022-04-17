@@ -5,14 +5,14 @@ const Footer = () => {
     const year = today.getFullYear();
     return (
 
-        <footer className='bg-dark text-center text-white fixed-bottom'>
+        <footer className='bg-dark text-center text-white'>
             <div className="text-center p-3">
                 &#169;  Copyright {year}:
-                <a className="text-white text-decoration-none px-3">EDU-STUDENT</a>
+                <p className="text-white text-decoration-none px-3">EDU-STUDENT</p>
             </div>
 
         </footer>
-
+        // fixed-bottom
     );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 import banner1 from '../../../images/banner/banner1.jpg';
 import banner2 from '../../../images/banner/banner2.jpg';
 import banner3 from '../../../images/banner/banner3.jpg';
@@ -22,6 +22,10 @@ const Slider = () => {
                 <Carousel.Caption>
                     <h3>First slide label</h3>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <div className='d-flex justify-content-center align-items-center p-2 '>
+                        <Button className='mx-2'>My Courses</Button>
+                        <Button>Blogs</Button>
+                    </div>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
