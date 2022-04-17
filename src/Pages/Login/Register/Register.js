@@ -25,6 +25,9 @@ const Register = () => {
         const password = passwordRef.current.value;
         createUserWithEmailAndPassword(email, password);
     }
+    if (user) {
+        navigate('/home');
+    }
 
     return (
         <div className='container mx-auto form-container'>
