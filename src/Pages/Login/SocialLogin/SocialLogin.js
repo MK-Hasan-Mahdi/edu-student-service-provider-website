@@ -6,6 +6,7 @@ import { SiGithub } from 'react-icons/si'
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../Shared/Loading/Loading';
 
 
 
@@ -16,11 +17,11 @@ const SocialLogin = () => {
 
     let errorMsg;
     if (errorGoogle || errorGithub) {
-        errorMsg = <p>Error: {errorGoogle?.message} {errorGithub?.message}</p>
+        errorMsg = <p className='text-danger'>Error: {errorGoogle?.message} {errorGithub?.message}</p>
 
     }
     if (loadingGoogle || loadingGithub) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>
     }
 
     if (userGoogle || userGithub) {
