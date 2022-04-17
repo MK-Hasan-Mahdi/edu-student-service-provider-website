@@ -3,32 +3,33 @@ import google from '../../../images/google.png';
 import github from '../../../images/github.png';
 import { SiGmail } from 'react-icons/si'
 import { SiGithub } from 'react-icons/si'
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 
 
 
 const SocialLogin = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-
+    const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGithub, userGithub, loadingGithub, errorGithub] = useSignInWithGithub(auth);
     const navigate = useNavigate();
 
-    if (error) {
-        return (<div>
-            <p>Error: {error.message}</p>
-        </div>);
+    let errorMsg;
+    if (errorGoogle || errorGithub) {
+        errorMsg = <p>Error: {errorGoogle?.message} {errorGithub?.message}</p>
+
     }
-    if (loading) {
+    if (loadingGoogle || loadingGithub) {
         return <p>Loading...</p>;
     }
 
-    if (user) {
+    if (userGoogle || userGithub) {
         navigate("/home");
     }
     return (
         <div>
             <h4>You Can Login with others Account</h4>
+            {errorMsg}
             <div>
                 <button onClick={() => signInWithGoogle()} className='btn btn-success mx-auto d-flex justify-content-center align-items-center my-2 w-50'>
                     {/* <img style={{ height: '20px' }} src={google} alt="" /> */}
@@ -37,7 +38,7 @@ const SocialLogin = () => {
                         <span>Login with Gmail</span>
                     </div>
                 </button>
-                <button className='btn btn-success mx-auto d-flex justify-content-center align-items-center w-50'>
+                <button onClick={() => signInWithGithub()} className='btn btn-success mx-auto d-flex justify-content-center align-items-center w-50'>
                     <div>
                         <span className='px-2'><SiGithub></SiGithub></span>
                         <span>Login with Github</span>

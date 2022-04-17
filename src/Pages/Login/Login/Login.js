@@ -11,11 +11,9 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-
-    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
     // for redirect location
     let from = location.state?.from?.pathname || "/";
-
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -24,11 +22,17 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
         // console.log(email, password);
     }
+    // give error message if email or password don't match
+    let errorMsg;
+    if (error) {
+        errorMsg = <p className='text-danger'>Error: {error?.message}</p>
+    }
+    // redirect user 
     if (user) {
         navigate(from, { replace: true });
     }
 
-
+    // navigate new user to register
     const navigateRegister = () => {
         navigate('/register');
     }
@@ -49,6 +53,7 @@ const Login = () => {
                 <Button variant="success w-50 d-block mx-auto mb-2" type="submit">
                     Login
                 </Button>
+                {errorMsg}
             </Form>
             <p>New User? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateRegister}>Register Now</Link></p>
             <SocialLogin></SocialLogin>
