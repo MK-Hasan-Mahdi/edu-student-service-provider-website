@@ -17,6 +17,9 @@ const Course = ({ course }) => {
             <h2>{name}</h2>
             <p>Price:{price}</p>
             <p><small>{description}</small></p>
+            <p><small>{description}</small></p>
+            <p><small>{description}</small></p>
+            <p><small>{description}</small></p>
             <button onClick={() => navigateToCourseDetail(id)} className='btn btn-success mx-auto d-block px-3'>Buy Now</button>
         </div >
     );

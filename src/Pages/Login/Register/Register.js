@@ -20,6 +20,7 @@ const Register = () => {
         navigate('/login');
     }
 
+    // after register button clicked:
     const handleRegister = async (event) => {
         event.preventDefault();
         const name = nameRef.current.value;
@@ -29,9 +30,11 @@ const Register = () => {
         await updateProfile({ displayName: name }); // update and show profile name
         navigate('/home');
     }
-    if (user) {
-        console.log("user:", user);
-    }
+    // if user logged in show console user's some detail
+    // if (user) {
+    //     console.log("user:", user);
+    // } 
+
 
     return (
         <div className='container mx-auto form-container'>
