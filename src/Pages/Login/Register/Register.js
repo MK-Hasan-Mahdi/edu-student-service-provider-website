@@ -38,7 +38,7 @@ const Register = () => {
 
     return (
         <div style={{ height: "100vh" }} className='container mx-auto form-container'>
-            <h2>Register</h2>
+            <h2 className='text-center text-success mt-3'>Register</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>

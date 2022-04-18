@@ -29,7 +29,7 @@ const SocialLogin = () => {
     }
     return (
         <div>
-            <h4>You Can Login with others Account</h4>
+            <h6 className='text-center'>Continue with others Account</h6>
             {errorMsg}
             <div>
                 <button onClick={() => signInWithGoogle()} className='btn btn-success mx-auto d-flex justify-content-center align-items-center my-2 w-50'>
