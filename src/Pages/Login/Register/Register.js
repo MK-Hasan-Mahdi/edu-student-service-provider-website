@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { sendEmailVerification } from 'firebase/auth';
 
 const Register = () => {
     const nameRef = useRef('');
@@ -19,6 +20,13 @@ const Register = () => {
     const navigateLogin = () => {
         navigate('/login');
     }
+    // user verify mail 
+    const userEmailVerify = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                // alert('email sent, verify your email');
+            })
+    }
 
     // after register button clicked:
     const handleRegister = async (event) => {
@@ -27,6 +35,7 @@ const Register = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
+        userEmailVerify();
         await updateProfile({ displayName: name }); // update and show profile name
         navigate('/home');
     }
