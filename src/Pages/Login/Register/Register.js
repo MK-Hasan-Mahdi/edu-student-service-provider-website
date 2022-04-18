@@ -37,7 +37,7 @@ const Register = () => {
 
 
     return (
-        <div className='container mx-auto form-container'>
+        <div style={{ height: "100vh" }} className='container mx-auto form-container'>
             <h2>Register</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">

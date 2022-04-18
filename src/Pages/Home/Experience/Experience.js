@@ -9,9 +9,11 @@ const Experience = () => {
                 <div className='col-lg-6'>
                     <img className='w-100 ' src={experiences} alt="" />
                 </div>
-                <div className='col-lg-6'>
-                    <h4 className='fw-bold pb-2'>Mentoring Program</h4>
-                    <p>My experiences I am sharing with you</p>
+                <div className='col-lg-6 d-flex align-items-center'>
+                    <div>
+                        <h4 className='fw-bold pb-2 fs-1'>Mentoring Program</h4>
+                        <p>My experiences I am sharing with you</p>
+                    </div>
                 </div>
             </div>
         </div>

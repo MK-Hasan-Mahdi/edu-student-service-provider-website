@@ -15,7 +15,7 @@ const LatestsOnline = () => {
     return (
         <div className='container'>
             <h2 className='text-primary text-center mt-5'>My Latest Article</h2>
-            <div className='row'>
+            <div className='row mb-5'>
                 {
                     latestsOnline.map(latest => <LatestOnline
                         key={latest.id}

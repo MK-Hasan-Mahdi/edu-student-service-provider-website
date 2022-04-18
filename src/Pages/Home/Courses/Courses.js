@@ -15,7 +15,7 @@ const Courses = () => {
         <div className='container'>
             {/* <div className="row"> */}
             <h2 className=' text-success text-center mt-5'>My Courses</h2>
-            <div className="row">
+            <div id='courses' className="row">
                 {
                     courses.map(course => <Course
                         key={course.id}

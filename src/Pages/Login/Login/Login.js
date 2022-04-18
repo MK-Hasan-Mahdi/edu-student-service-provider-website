@@ -37,7 +37,7 @@ const Login = () => {
         navigate('/register');
     }
     return (
-        <div className='container mx-auto form-container'>
+        <div style={{ height: "100vh" }} className='container mx-auto form-container'>
             <h2 className='text-success text-center mt-3' > Login Please</h2 >
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
