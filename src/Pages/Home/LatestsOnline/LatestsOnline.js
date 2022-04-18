@@ -8,9 +8,9 @@ import LatestOnline from '../LatestOnline/LatestOnline';
 const LatestsOnline = () => {
     const latestsOnline = [
         { id: 1, name: 'React Router', img: latest1 },
-        { id: 2, name: 'React Router', img: latest2 },
-        { id: 3, name: 'React Router', img: latest3 },
-        { id: 4, name: 'React Router', img: latest4 }
+        { id: 2, name: 'React Native', img: latest2 },
+        { id: 3, name: 'Javascript ES6', img: latest3 },
+        { id: 4, name: 'React Hooks', img: latest4 }
     ]
     return (
         <div className='container'>

@@ -8,7 +8,8 @@ const LatestOnline = ({ latest }) => {
                 <img style={{ height: "170px" }} src={img} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p className="card-text">Build powerful, fast, user-friendly and reactive web apps
+                        JavaScript with ease Learn all about React Hooks and React Components</p>
                     <a href="#" className="btn btn-dark">Read More...</a>
                 </div>
             </div>
