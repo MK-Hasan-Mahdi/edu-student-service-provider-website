@@ -32,14 +32,14 @@ const SocialLogin = () => {
             <h6 className='text-center'>Continue with others Account</h6>
             {errorMsg}
             <div>
-                <button onClick={() => signInWithGoogle()} className='btn btn-success mx-auto d-flex justify-content-center align-items-center my-2 w-50'>
+                <button onClick={() => signInWithGoogle()} className='btn btn-outline-dark mx-auto d-flex justify-content-center align-items-center my-2 w-50'>
                     {/* <img style={{ height: '20px' }} src={google} alt="" /> */}
                     <div className='d-flex justify-content-center align-items-center'>
                         <span className='px-2'><SiGmail></SiGmail></span>
                         <span>Login with Gmail</span>
                     </div>
                 </button>
-                <button onClick={() => signInWithGithub()} className='btn btn-success mx-auto d-flex justify-content-center align-items-center w-50'>
+                <button onClick={() => signInWithGithub()} className='btn btn-outline-dark mx-auto d-flex justify-content-center align-items-center w-50'>
                     <div>
                         <span className='px-2'><SiGithub></SiGithub></span>
                         <span>Login with Github</span>
