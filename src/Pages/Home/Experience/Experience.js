@@ -12,7 +12,7 @@ const Experience = () => {
                 <div className='col-lg-6 d-flex align-items-center'>
                     <div>
                         <h4 className='fw-bold pb-2 fs-1'>Mentoring Program</h4>
-                        <p>My experiences I am sharing with you</p>
+                        <p>My experiences I am sharing with you. I build a custom-made curriculum starting at a level that's comfortable...</p>
                     </div>
                 </div>
             </div>
