@@ -5,11 +5,11 @@
 ## Used Features
 
 - React Router
-- React Router
-- Carousel 
 - React Firebase Hooks
 - React Bootstrap
 - Firebase
+- Carousel
+- React Toast
 - Not found image/404 page 
 - ES6 features
 
