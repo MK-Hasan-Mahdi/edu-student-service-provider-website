@@ -5,11 +5,12 @@ import { Link, useParams } from 'react-router-dom';
 const CourseDetail = () => {
     const { courseId } = useParams();
     return (
-        <div className='container'>
-            <h2>Welcome to course detail: {courseId} </h2>
+        <div style={{ height: "100vh" }} className='container my-5'>
+            <h2 className=''>Welcome to my course buying process</h2>
+            <p>For further proceed please checkout first. Hopefully we will deal a better opportunity.</p>
             <div className='text-center '>
                 <Link to="/checkout">
-                    <Button>Checkout</Button>
+                    <button className='btn btn-dark btn-lg'>Checkout</button>
                 </Link>
             </div>
         </div>
