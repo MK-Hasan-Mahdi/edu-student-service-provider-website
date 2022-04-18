@@ -1,6 +1,7 @@
 import React from 'react';
-import Blogs from '../../Blogs/Blogs/Blogs';
 import Courses from '../Courses/Courses';
+import Experience from '../Experience/Experience';
+import LatestsOnline from '../LatestsOnline/LatestsOnline';
 import Slider from '../Slider/Slider';
 
 const Home = () => {
@@ -8,6 +9,8 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <Courses></Courses>
+            <Experience></Experience>
+            <LatestsOnline></LatestsOnline>
         </div>
     );
 };
