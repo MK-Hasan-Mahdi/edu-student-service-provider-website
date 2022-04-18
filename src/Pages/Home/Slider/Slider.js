@@ -20,12 +20,11 @@ const Slider = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    <div className='d-flex justify-content-center align-items-center p-2 '>
-                        <Button className='mx-2'>My Courses</Button>
-                        <Button>Blogs</Button>
-                    </div>
+                    <h3>I Love to teach Javascript</h3>
+                    <p>Can help you learn Javascript from scratch</p>
+
+                    <button className='btn-lg btn-dark'>My Blogs</button>
+
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -36,8 +35,9 @@ const Slider = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3>Coding is funny</h3>
+                    <p>Ensure how to learn without fear.</p>
+                    <button className='btn-lg btn-dark'>My Blogs</button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -48,10 +48,9 @@ const Slider = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
+                    <h3>Let's start coding</h3>
+                    <p>ECMAScript is the standard.</p>
+                    <button className='btn-lg btn-dark'>My Blogs</button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
