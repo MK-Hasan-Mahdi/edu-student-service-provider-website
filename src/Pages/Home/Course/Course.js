@@ -17,7 +17,7 @@ const Course = ({ course }) => {
                 <img className=' w-100 rounded-3' src={img} alt="" />
                 <div className='d-flex flex-column justify-content-center align-items-center py-3'>
                     <h6 className='text-success'>{name}</h6>
-                    <p>Price:{price}</p>
+                    <p>Price: ${price}</p>
                     <p><small>{description}</small></p>
                 </div>
                 <div className='d-flex flex-column justify-content-center'>
